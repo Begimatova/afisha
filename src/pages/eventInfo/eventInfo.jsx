@@ -15,16 +15,18 @@ export const EventInfo = () => {
 			<div className='eventImage'>
 				<img src={eventDetails.imageUrl} />
 			</div>
-			<div>{eventDetails.eventDate}</div>
-			<div>{eventDetails.eventStart}</div>
-			<div>{eventDetails.eventEnd}</div>
-			<div>{eventDetails.contact}</div>
-			<div className='eventImage'>
+
+			<div className='eventPoster'>
 				<img src={eventDetails.poster} />
 			</div>
-			<div>{eventDetails.description}</div>
-			<div></div>
-			<div></div>
+
+			<div className='discription'>{eventDetails.description}</div>
+			<div className='data'>
+				<div>ДАТА:{eventDetails.eventDate}</div>
+				<div>НАЧАЛО:{eventDetails.eventStart}</div>
+				<div>КОНЕЦ:{eventDetails.eventEnd}</div>
+				<div>КОНТАКТЫ:{eventDetails.contact}</div>
+			</div>
 		</div>
 	)
 }

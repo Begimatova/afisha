@@ -3,10 +3,41 @@
 	margin: 0 auto;
 	width: 100%;
 	margin-top: 30px;
-
+	.data {
+		margin-top: 60px;
+		width: 400px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-bottom: 180px;
+	}
+	.discription {
+		font-family: Roboto, sans-serif;
+		color: #000;
+		background: #fff;
+		font-size: 16px;
+		line-height: 180%;
+		margin-top: 80px;
+		word-wrap: break-word;
+		margin-bottom: 100px;
+	}
+	.eventPoster {
+		img {
+			max-width: 658px;
+			max-height: 930px;
+		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 60px;
+		border-radius: 10px;
+	}
 	.eventTitle {
-		font-size: 28px;
+		font-size: 48px;
 		line-height: 33px;
+		display: flex;
+		justify-content: center;
+		margin: 50px auto;
 	}
 	.eventImage {
 		display: flex;
