@@ -1,0 +1,18 @@
+.wrapper {
+	max-width: 1152px;
+	margin: 0 auto;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.eventGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(273px, 1fr));
+	gap: 20px;
+	justify-items: center;
+	margin-top: 8px;
+
+	& > div:nth-last-col {
+		justify-self: right;
+	}
+}

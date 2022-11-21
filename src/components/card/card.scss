@@ -1,0 +1,26 @@
+.card {
+	width: 273px;
+	cursor: pointer;
+	&-image {
+		height: 144px;
+		width: 100%;
+		border-radius: 8px;
+	}
+	&-title {
+		font-family: Roboto, sans-serif;
+		width: 100%;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(0, 0, 0, 0.865);
+		margin-top: 8px;
+	}
+	&-eventDate {
+		width: 100%;
+		font-size: 12px;
+		line-height: 16px;
+		color: rgba(0, 0, 0, 0.48);
+		margin-top: 4px;
+		font-family: Roboto, sans-serif;
+	}
+}
