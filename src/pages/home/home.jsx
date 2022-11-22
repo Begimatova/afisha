@@ -1,4 +1,4 @@
-import { CircularProgress, LinearProgress } from '@mui/material'
+import { CircularProgress, LinearProgress, Pagination } from '@mui/material'
 import { Box } from '@mui/system'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
@@ -66,6 +66,7 @@ export const Home = () => {
 						'мероприятий нет..'
 					)}
 				</div>
+				<Pagination count={10} color='primary' />
 			</div>
 		</div>
 	)

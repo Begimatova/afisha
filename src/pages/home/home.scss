@@ -3,6 +3,7 @@
 	margin: 0 auto;
 	width: 100%;
 	margin-top: 30px;
+	margin-bottom: 100px;
 }
 
 .eventGrid {
@@ -11,7 +12,7 @@
 	gap: 20px;
 	justify-items: center;
 	margin-top: 8px;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 
 	& > div:nth-last-col {
 		justify-self: right;
