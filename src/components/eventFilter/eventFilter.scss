@@ -1,6 +1,11 @@
 .eventFilter {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	.filters {
+		display: flex;
+	}
 	.button {
 		margin-right: 4px;
 		margin-bottom: 4px;

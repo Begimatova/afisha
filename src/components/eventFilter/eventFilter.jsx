@@ -5,6 +5,7 @@ import {
 	toggleCategoryModal,
 } from '../../redux/filter/filterSlice'
 import { setActiveCategory } from '../../redux/category/categorySlice'
+import { Button, TextField } from '@mui/material'
 
 export const EventFilter = () => {
 	const filterAll = useSelector(state => state.filterSlice.filterAll)
@@ -19,25 +20,47 @@ export const EventFilter = () => {
 		dispatch(setActiveCategory({ label: 'Категории', value: '' }))
 	}
 
+	const onClickCategory = () => {
+		dispatch(toggleCategoryModal())
+	}
+
+	console.log(filterCategory)
 	return (
 		<div className='eventFilter'>
-			<div
-				onClick={onClickAll}
-				className={[
-					filterAll && filterCategory.label === 'Категории' ? 'active' : '',
-					'button',
-				].join(' ')}
-			>
-				Все
+			<div className='filters'>
+				<Button
+					size='small'
+					variant={
+						filterAll && filterCategory.label === 'Категории'
+							? 'contained'
+							: 'outlined'
+					}
+					onClick={onClickAll}
+					sx={{
+						marginRight: 2,
+					}}
+				>
+					Все
+				</Button>
+				<Button
+					size='small'
+					variant={
+						filterCategory.label !== 'Категории' && !filterAll
+							? 'contained'
+							: 'outlined'
+					}
+					onClick={onClickCategory}
+				>
+					{filterCategory.label}
+				</Button>
 			</div>
-			<div
-				onClick={() => dispatch(toggleCategoryModal())}
-				className={[
-					filterCategory.label !== 'Категории' && !filterAll ? 'active' : '',
-					'button',
-				].join(' ')}
-			>
-				{filterCategory.label}
+			<div>
+				<TextField
+					size='small'
+					id='outlined-search'
+					label='поиск'
+					type='search'
+				/>
 			</div>
 		</div>
 	)
